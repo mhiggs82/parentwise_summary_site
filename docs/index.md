@@ -11,17 +11,17 @@ Use the search bar above or browse by category below to get started.
 
 <div class="grid cards" box-shadow>
 
--   **[Communication](Book_Summaries/COMM/index.md)**
-    [:material-chat: Efficient dialogue strategies.](Book_Summaries/COMM/index.md)
+-   [:material-chat: **Communication**](Book_Summaries/COMM/index.md)
+    *Efficient dialogue strategies.*
 
--   **[Foundational Skills](Book_Summaries/FOUND/index.md)**
-    [:material-brain: Core psychological principles.](Book_Summaries/FOUND/index.md)
+-   [:material-brain: **Foundational Skills**](Book_Summaries/FOUND/index.md)
+    *Core psychological principles.*
 
--   **[Mental Health](Book_Summaries/MENT/index.md)**
-    [:material-heart-pulse: Resilience and emotional support.](Book_Summaries/MENT/index.md)
+-   [:material-heart-pulse: **Mental Health**](Book_Summaries/MENT/index.md)
+    *Resilience and emotional support.*
 
--   **[Teen Parenting](Book_Summaries/TEEN/index.md)**
-    [:material-account-group: Navigating the adolescent years.](Book_Summaries/TEEN/index.md)
+-   [:material-account-group: **Teen Parenting**](Book_Summaries/TEEN/index.md)
+    *Navigating the adolescent years.*
 
 </div>
 
