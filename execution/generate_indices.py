@@ -3,16 +3,17 @@ import os
 docs_dir = 'docs/Book_Summaries'
 categories = {
     'COMM': 'Communication',
-    'DIGI': 'Digital Parenting',
-    'FMLY': 'Family & Relationships',
-    'FOUND': 'Foundational Skills',
-    'GLOB': 'Global Perspectives',
-    'GNDR': 'Gender & Identity',
+    'DIGI': 'Digital & Technology',
+    'FMLY': 'Family Dynamics',
+    'FOUND': 'Foundational Parenting',
+    'GLOB': 'Global & Cultural',
+    'GNDR': 'Gender-Specific',
     'LIFE': 'Life Skills',
     'MENT': 'Mental Health',
     'SPEC': 'Special Needs',
-    'TEEN': 'Teen Parenting',
-    'MISC': 'Miscellaneous'
+    'TEEN': 'Teenagers',
+    'MISC': 'Miscellaneous',
+    'PRNT': 'Parent Self-Development'
 }
 
 for cat_code, cat_name in categories.items():
@@ -26,20 +27,38 @@ for cat_code, cat_name in categories.items():
     files = [f for f in os.listdir(cat_dir) if f.endswith('.md') and f != 'index.md']
     files.sort()
     
-    content = f"# {cat_name} ({cat_code})\n\n"
-    content += f"Browse our collection of curated summaries focused on **{cat_name.lower()}**.\n\n"
-    content += "### Summaries in this Category\n\n"
+    num_summaries = len(files)
+    
+    content = f"# {cat_name}\n"
+    content += f"{num_summaries} summaries found\n\n"
+    content += '<div class="grid cards" markdown="1">\n\n'
     
     for f in files:
-        # Extract title (remove prefix and extension)
-        title = f.replace(f"{cat_code}-", "").replace(".md", "")
-        # Handle the "NNN - Title" format
-        if " - " in title:
-            title = title.split(" - ", 1)[1]
-            
-        content += f"*   [{title}]({f})\n"
+        # Extract title and author from naming convention "CODE-NNN - Title by Author"
+        # Most files follow "COMM-001 - Title by Author.md"
+        raw_name = f.replace(".md", "")
         
+        # Remove prefix like "COMM-001 - "
+        if " - " in raw_name:
+            main_part = raw_name.split(" - ", 1)[1]
+        else:
+            main_part = raw_name
+            
+        if " by " in main_part:
+            title, author = main_part.rsplit(" by ", 1)
+        else:
+            title = main_part
+            author = "Expert Author"
+            
+        content += f'-   <span class="pw-badge" style="font-size: 0.6rem; margin-bottom: 8px;">{cat_name}</span>\n'
+        content += f'    <div class="pw-book-title">{title}</div>\n'
+        content += f'    <div class="pw-book-author">by {author}</div>\n'
+        content += f'    <div class="pw-tag-container"><span class="pw-micro-tag">Key Insight</span> <span class="pw-micro-tag">Expert Review</span></div>\n'
+        content += f'    [Read Summary :octicons-arrow-right-24:]({f})\n\n'
+        
+    content += '</div>\n'
+    
     with open(index_path, 'w') as out:
         out.write(content)
 
-print("Category indices generated successfully.")
+print("Card-based category indices generated successfully.")
