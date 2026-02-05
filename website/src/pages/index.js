@@ -28,16 +28,16 @@ export default function Home() {
     { badge: 'FOUND', name: 'Foundational', count: 40, description: 'General strategies, philosophies, and foundational advice for raising children.', to: '/docs/foundational' },
     { badge: 'COMM', name: 'Communication', count: 14, description: 'Mastering dialogue, active listening, and conflict resolution with kids.', to: '/docs/communication' },
     { badge: 'SPEC', name: 'Special Needs', count: 15, description: 'Expert guidance for ADHD, Autism, sensory processing, and unique challenges.', to: '/docs/special-needs' },
-    { badge: 'DIGI', name: 'Digital', count: 6, description: 'Positive reinforcement, boundaries, and behavioral correction techniques.', to: '/docs/digital' },
-    { badge: 'DEV', name: 'Development', count: 23, description: 'Age-appropriate milestones, cognitive growth, and physical changes.', to: '/docs/development' },
-    { badge: 'EI', name: 'Emotional Int.', count: 19, description: 'Fostering empathy, self-regulation, and emotional awareness in children.', to: '/docs/emotional-intelligence' },
+    { badge: 'DIGI', name: 'Digital', count: 6, description: 'Navigating technology, screen time, and digital wellness with children.', to: '/docs/digital-age-technology' },
+    { badge: 'DEV', name: 'Development', count: 23, description: 'Age-appropriate milestones, cognitive growth, and character development.', to: '/docs/character-development' },
+    { badge: 'EI', name: 'Emotional Int.', count: 19, description: 'Fostering empathy, self-regulation, and emotional awareness in children.', to: '/docs/mental-health' },
   ];
 
   const recentBooks = [
-    { badge: 'PRTG', title: 'The Whole-Brain Child', author: 'Daniel Siegel, Tina Payne Bryson', insights: 12, actions: 3, to: '/docs/parenting/FOUND-003 - The Whole-Brain Child by Daniel Siegel and Tina Payne Bryson' },
-    { badge: 'COMM', title: 'How to Talk So Kids Will Listen', author: 'Adele Faber, Elaine Mazlish', insights: 15, actions: 6, to: '/docs/communication/COMM-002 - How to Talk So Kids Will Listen and Listen So Kids Will Talk by Adele Faber and Elaine Mazlish' },
-    { badge: 'EI', title: 'Emotional Intelligence', author: 'Daniel Goleman', insights: 18, actions: 4, to: '/docs/emotional-intelligence/MENT-001 - Emotional Intelligence Why It Can Matter More Than IQ by Daniel Goleman' },
-    { badge: 'SPEC', title: 'Troublemakers', author: 'Carla Shalaby', insights: 9, actions: 5, to: '/docs/special-needs/SPEC-014 - Troublemakers by Carla Shalaby' },
+    { badge: 'FOUND', title: 'The Whole-Brain Child', author: 'Daniel Siegel, Tina Payne Bryson', insights: 12, actions: 3, to: '/docs/foundational/FOUND-003%20-%20The%20Whole-Brain%20Child%20by%20Daniel%20Siegel%20and%20Tina%20Payne%20Bryson' },
+    { badge: 'COMM', title: 'How to Talk So Kids Will Listen', author: 'Adele Faber, Elaine Mazlish', insights: 15, actions: 6, to: '/docs/communication/COMM-002%20-%20How%20to%20Talk%20So%20Kids%20Will%20Listen%20and%20Listen%20So%20Kids%20Will%20Talk%20by%20Adele%20Faber%20and%20Elaine%20Mazlish' },
+    { badge: 'MENT', title: 'Raising An Emotionally Intelligent Child', author: 'Dr. John Gottman, Joan Declaire', insights: 18, actions: 4, to: '/docs/mental-health/MENT-001%20-%20Raising%20An%20Emotionally%20Inteligent%20Child%20by%20Dr.%20John%20Gottman%20and%20Joan%20Declaire' },
+    { badge: 'SPEC', title: 'Troublemakers', author: 'Carla Shalaby', insights: 9, actions: 5, to: '/docs/special-needs/SPEC-014%20-%20Troublemakers%20by%20Carla%20Shalaby' },
   ];
 
   return (
